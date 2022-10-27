@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    font-size: 25px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.logo{
+    color: white;
+    text-shadow:  0 0 3px #000;
+}
+.logo span{
+    color: #000;
+    text-decoration: underline;
+}
+
+.menu{
+    float: right;
+    font-size: 27px;
+}
+
+main{
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+.barra{
+    float: right;
+}
+
+.barra ul{
+    list-style: none;
+}
+.barra ul li{
+    display: inline-block;
+}
+.barra a{
+    text-decoration: none;
+    color: #000;
+    font-family: sans-serif;
+}
+
+.barra a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+.call{
+    width: 50%;
+    background-color: antiquewhite;
+    border: 2px solid #000;
+    border-radius: 5px;
+    float: right;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1{
+    color: dimgray;
+    margin-bottom: 10px;
+}
+
+.call p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.call a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #000;
+}
+.call a:hover{
+    color: #333;
+    text-decoration: underline
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    background-color: darksalmon;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    letter-spacing: 3px;
+}
+/* TERMINA FOOTER */
+/* REDES DEL FOOTER */
+.redes a{
+    color: #000;
+}
+.redes a :hover{
+    color: #333;
+    text-shadow: 0 0 5px #333;
+}
+/* TERMINA REDES */
+.galeria{
+    background-color: antiquewhite;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,200px);
+    grid-gap: 20px;
+    padding: 20px;
+}
+h2{
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: antiquewhite;
+    text-shadow:  0 0 5px #333;
+    padding: 10px
+}
+h2:hover{
+    text-decoration: underline;
+}
+.item{
+    width: 100%;
+    border: 2px solid #000;
+}
+.item:hover{
+    transform: scale(1.05);
+    transition: all 1s;
+}
+.item1{
+    background-image: url(img/zapatillanegra.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.item2{
+    background-image: url(img/zapatillaroja.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item4{
+    background-image: url(img/zapatillasgris.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.item5{
+    background-image: url(img/camperaroja.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.item6{
+    background-image: url(img/camperazul.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.item7{
+    background-image: url(img/pantalonblanco.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media only screen and (min-width:480px){
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 180px);
+    }
+}
+@media only screen and (min-width: 768px){
+    .galeria{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 200px);
+    }
+    .item4{
+        grid-row:1/3;
+    }
+}
+@media only screen and (min-width:1200px){
+    .galeria{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row: repeat(1, 250px);
+    }
+}
